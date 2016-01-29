@@ -1,4 +1,7 @@
-FROM continuumio/anaconda
+FROM ubuntu:14.04
+
+RUN sudo apt-get update && sudo apt-get install -y python-dev python-pip
+RUN sudo pip install pandas
 
 RUN mkdir /opt/mapping
 RUN mkdir /data
